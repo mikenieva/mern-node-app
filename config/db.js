@@ -1,8 +1,11 @@
+// ES LA CONEXIÓN DE LA BASE DE DATOS
 const mongoose = require('mongoose')
-require('dotenv').config({path: 'variables.env'})
+require('dotenv').config(
+    {path: 'variables.env'}
+)
 
 const conectarDB = async () => {
-    try{
+    try {
         await mongoose.connect(process.env.DB_MONGO, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
@@ -13,8 +16,6 @@ const conectarDB = async () => {
         console.log(error)
         process.exit(1) // Detener la app
     }
-
-
 }
 
 module.exports = conectarDB

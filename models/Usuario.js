@@ -4,7 +4,7 @@ const UsuariosSchema = mongoose.Schema({
     nombre: {
         type: String,
         required: true,
-        trime: true
+        trim: true
     },
     email: {
         type: String,
